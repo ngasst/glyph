@@ -2,7 +2,11 @@ export default {
     data () {
         return {
             content: '',
-            nlcst: {}
+            nlcst: {},
+            caret: 0,
+            caretel: null,
+            selection: {},
+            range: null
         }
     }
 }

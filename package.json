@@ -14,7 +14,13 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "hast-util-find-and-replace": "^1.0.0",
+    "hast-util-heading": "^1.0.0",
+    "hast-util-select": "^1.0.0",
+    "hast-util-to-html": "^3.0.0",
     "hast-util-to-nlcst": "^1.0.0",
+    "hast-util-to-string": "^1.0.0",
+    "hastscript": "^3.0.1",
     "parse-english": "^4.0.0",
     "rehype": "^4.0.0",
     "rehype-parse": "^3.1.0",

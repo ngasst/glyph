@@ -1,10 +1,8 @@
 export default {
     watch: {
-        'nlcs'(val, old) {
+        'content'(val, old) {
             if (val !== old) {
-                const selection = '';
-                const content = this.getHtmlFromTree(val);
-                this.content = content;
+                this.updateEditor(val);
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-  <div id='custom-ed' contenteditable="true" v-html="content" @input="handleInput">
+  <div id='custom-ed' contenteditable="true" @input="handleInput">
     
   </div>
 </template>
@@ -10,9 +10,10 @@ import methomix from './custom/methods';
 import datamix from './custom/data';
 import hookmix from './custom/hooks';
 import animix from './custom/animations';
+import watchmix from './custom/watch';
 export default {
   name: 'custom-ed',
-  mixins: [compumix, methomix, datamix, hookmix, animix]
+  mixins: [compumix, methomix, datamix, hookmix, animix, watchmix]
 
 }
 </script>

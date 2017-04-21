@@ -1318,7 +1318,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-comma-separated-tokens@^1.0.0, comma-separated-tokens@^1.0.1:
+comma-separated-tokens@^1.0.0, comma-separated-tokens@^1.0.1, comma-separated-tokens@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.3.tgz#6eb01f4730bde7a7fce5d5e2d943bdd637272801"
   dependencies:
@@ -1571,6 +1571,10 @@ css-select@^1.1.0:
     css-what "2.1"
     domutils "1.5.1"
     nth-check "~1.0.1"
+
+css-selector-parser@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/css-selector-parser/-/css-selector-parser-1.3.0.tgz#5f1ad43e2d8eefbfdc304fcd39a521664943e3eb"
 
 css-selector-tokenizer@^0.6.0:
   version "0.6.0"
@@ -2798,6 +2802,16 @@ hast-util-embedded@^1.0.0:
   dependencies:
     hast-util-is-element "^1.0.0"
 
+hast-util-find-and-replace@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-find-and-replace/-/hast-util-find-and-replace-1.0.0.tgz#20e18c6a3811b06b5c3ac9bf33d2727b82919209"
+  dependencies:
+    escape-string-regexp "^1.0.5"
+    hast-util-is-element "^1.0.0"
+    is-regex "^1.0.3"
+    isarray "^2.0.1"
+    unist-util-visit-parents "^1.1.0"
+
 hast-util-from-parse5@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hast-util-from-parse5/-/hast-util-from-parse5-1.1.0.tgz#359cc339dc8ccf1dfaca41915ad63fd546130acd"
@@ -2811,6 +2825,12 @@ hast-util-from-parse5@^1.0.0:
 hast-util-has-property@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hast-util-has-property/-/hast-util-has-property-1.0.0.tgz#211f9d7f7640898244a33f5d16f5c5d1880c8e40"
+
+hast-util-heading@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-heading/-/hast-util-heading-1.0.0.tgz#4a040ab9f92613dfb84403c2717848c23bbd2658"
+  dependencies:
+    hast-util-is-element "^1.0.0"
 
 hast-util-is-body-ok-link@^1.0.0:
   version "1.0.0"
@@ -2835,6 +2855,23 @@ hast-util-phrasing@^1.0.0:
     hast-util-has-property "^1.0.0"
     hast-util-is-body-ok-link "^1.0.0"
     hast-util-is-element "^1.0.0"
+
+hast-util-select@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-select/-/hast-util-select-1.0.0.tgz#c4553d994c653a8bcbde317a1e78500b809b9703"
+  dependencies:
+    camelcase "^3.0.0"
+    comma-separated-tokens "^1.0.2"
+    css-selector-parser "^1.3.0"
+    has "^1.0.1"
+    hast-util-has-property "^1.0.0"
+    hast-util-is-element "^1.0.0"
+    hast-util-whitespace "^1.0.0"
+    not "^0.1.0"
+    nth-check "^1.0.1"
+    property-information "^3.1.0"
+    space-separated-tokens "^1.1.0"
+    zwitch "^1.0.0"
 
 hast-util-to-html@^3.0.0:
   version "3.0.0"
@@ -2874,7 +2911,7 @@ hast-util-whitespace@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-1.0.0.tgz#bd096919625d2936e1ff17bc4df7fd727f17ece9"
 
-hastscript@^3.0.0:
+hastscript@^3.0.0, hastscript@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/hastscript/-/hastscript-3.0.1.tgz#9edfab8839e6d67bc6835297a0bf9ba6ad7a00a9"
   dependencies:
@@ -3285,6 +3322,12 @@ is-primitive@^2.0.0:
 is-property@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-property/-/is-property-1.0.2.tgz#57fe1c4e48474edd65b09911f26b1cd4095dda84"
+
+is-regex@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
+  dependencies:
+    has "^1.0.1"
 
 is-resolvable@^1.0.0:
   version "1.0.0"
@@ -4224,6 +4267,10 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
+not@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/not/-/not-0.1.0.tgz#c9691c1746c55dcfbe54cbd8bd4ff041bc2b519d"
+
 "npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-4.0.2.tgz#d03950e0e78ce1527ba26d2a7592e9348ac3e75f"
@@ -4233,7 +4280,7 @@ normalize-url@^1.4.0:
     gauge "~2.7.1"
     set-blocking "~2.0.0"
 
-nth-check@~1.0.1:
+nth-check@^1.0.1, nth-check@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.1.tgz#9929acdf628fc2c41098deab82ac580cf149aae4"
   dependencies:
@@ -5657,7 +5704,7 @@ source-map@~0.2.0:
   dependencies:
     amdefine ">=0.0.4"
 
-space-separated-tokens@^1.0.0:
+space-separated-tokens@^1.0.0, space-separated-tokens@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.0.tgz#9e8c60407aa527742cd9eaee2541dec639f1269b"
   dependencies:
@@ -6121,6 +6168,10 @@ unist-util-visit-children@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.0.tgz#bf1cd7be3c0a4efd03d84a22dd0ee7db005a3f6b"
 
+unist-util-visit-parents@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-1.1.0.tgz#6f132ca3a5850e73e1e9e49c179cda9d436be340"
+
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
@@ -6441,6 +6492,10 @@ x-is-function@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/x-is-function/-/x-is-function-1.0.4.tgz#5d294dc3d268cbdd062580e0c5df77a391d1fa1e"
 
+x-is-object@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/x-is-object/-/x-is-object-0.1.0.tgz#8f9496d1686df487156096e76ca9944efc15bfec"
+
 x-is-string@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/x-is-string/-/x-is-string-0.1.0.tgz#474b50865af3a49a9c4657f05acd145458f77d82"
@@ -6548,3 +6603,10 @@ yauzl@2.4.1:
 yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+
+zwitch@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.0.tgz#1ca2c5fe26445ac868b2f063454e89caad39df7b"
+  dependencies:
+    has "^1.0.1"
+    x-is-object "^0.1.0"
