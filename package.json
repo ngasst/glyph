@@ -31,6 +31,7 @@
     "retext-stringify": "^2.0.0",
     "to-vfile": "^2.1.1",
     "unified": "^6.1.2",
+    "unist-builder": "^1.0.2",
     "unist-util-inspect": "^4.1.0",
     "vfile": "^2.0.1",
     "vue": "^2.2.2",

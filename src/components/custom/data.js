@@ -6,7 +6,9 @@ export default {
             caret: 0,
             caretel: null,
             selection: {},
-            range: null
+            range: null,
+            selinfo: null,
+            model: null
         }
     }
 }

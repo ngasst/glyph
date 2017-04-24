@@ -47,37 +47,74 @@ export default {
                             ...el,
                             tagName: 'em'
                         }
-                    } else if (div) {
+                    } /*else if (div) {
                         el = {
                             ...el,
                             tagName: 'p'
                         }
-                    }
+                    }*/
                     //console.log(el);
                     return el;
                 }).filter(el => !matches('br', el))
             };
 
             const hstr = htmlify(conform);
-            const s = document.getSelection();
-            console.log(s);
-            const r = document.getSelection().getRangeAt(0);
-            this.range = r;
-            this.caret = r.endOffset;
-            this.caretel = r.endContainer;
             this.content = hstr;
-            console.log(this.range);
+            this.saveSelection();
         },
         updateEditor(hstr) {
             const el = this.$el;
             el.innerHTML = hstr;
-            const selection = document.getSelection();
-            selection.removeAllRanges();
-            const range = document.createRange();
-            console.log(this.caretel)
-            range.setEnd(this.caretel, this.caret);
-            console.log(range);
-            selection.addRange(range);
+            this.restoreSelection();
+        },
+        saveSelection() {
+            const sel = window.getSelection();
+            const r = sel.getRangeAt(0);
+            const pre = r.cloneRange();
+            pre.selectNodeContents(this.$el);
+            pre.setEnd(r.startContainer, r.startOffset);
+            const start = pre.toString().length;
+            this.selinfo = {
+                start: start,
+                end: start + r.toString().length
+            };
+        },
+        restoreSelection() {
+            let charidx = 0;
+            let range = document.createRange();
+            range.setStart(this.$el, 0);
+            range.collapse(true);
+            let nodeStack = [this.$el];
+            let node;
+            let foundStart = false;
+            let stop = false;
+
+            while(!stop && (node = nodeStack.pop())) {
+                if (node.nodeType == 3) {
+                    let nextCharIdx = charidx + node.length;
+
+                    if (!foundStart && this.selinfo.start >= charidx && this.selinfo.start <= nextCharIdx) {
+                        range.setStart(node, this.selinfo.start - charidx);
+                        foundStart = true;
+                    }
+
+                    if (foundStart && this.selinfo.end >= charidx && this.selinfo.end <= nextCharIdx) {
+                        range.setEnd(node, this.selinfo.end - charidx);
+                        stop = true;
+                    }
+                    charidx = nextCharIdx;
+                } else {
+                    let i = node.childNodes.length;
+
+                    while(i--) {
+                        nodeStack.push(node.childNodes[i]);
+                    }
+                }
+            }
+
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
         }
     }
 }
