@@ -17,7 +17,7 @@ export default {
                 .replace(/<\/i>/gi, '</em>')
                 .replace(/<div>/gi, '<p>')
                 .replace(/<\/div>/gi, '</p>');*/
-            
+
             const tree = rehype()
                 .data('settings', {fragment: true})
                 .parse(html);
@@ -75,7 +75,7 @@ export default {
             selection.removeAllRanges();
             const range = document.createRange();
             console.log(this.caretel)
-            range.setEnd(document.querySelector(this.caretel), this.caret);
+            range.setEnd(this.caretel, this.caret);
             console.log(range);
             selection.addRange(range);
         }
